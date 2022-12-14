@@ -14,16 +14,17 @@
 
   <div class="container">
 
-    <div class="display-4 mb-2">ToDo приложение</div>
-    <div class="h4 mb-5">Cписок задач на сегодня</div>
+    <div class="display-4 mb-2">ToDo App</div>
+    <div class="h4 mb-5">To-do list for today</div>
 
     <!-- List of tasks -->
     <div class="card mb-4">
       <ul id="tasksList" class="list-group list-group-flush">
 
         <li id="emptyList" class="list-group-item empty-list">
-          <img src="./img/leaf.svg" alt="Empty" width="48" class="mt-3">
-          <div class="empty-list__title">Список дел пуст</div>
+          <img src="./img/img1.jpg" alt="Empty" width="48" class="mt-3">
+          <div class="empty-list__title">
+            To-do list is empty</div>
         </li>
 
         <!-- <li class="list-group-item d-flex justify-content-between task-item">
@@ -44,15 +45,16 @@
 
     <!-- Form -->
     <div class="card bg-light">
-      <div class="card-header">Добавить новую задачу</div>
+      <div class="card-header">
+        Add a new task</div>
       <div class="card-body">
         <form id="form">
           <div class="form-group">
             <input type="text" class="form-control" id="taskInput" placeholder="Текст задачи" required>
-            <small id="emailHelp" class="form-text text-muted">Что делаем, сколько времени тратим, какой результат
-              получаем.</small>
+            <small id="emailHelp" class="form-text text-muted">
+              What do we do. How much time do we spend. What result do we get.</small>
           </div>
-          <button type="submit" class="btn btn-primary  btn-lg active">Добавить</button>
+          <button type="submit" class="btn btn-primary  btn-lg active">Add</button>
         </form>
       </div>
     </div>
