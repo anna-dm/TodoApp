@@ -83,7 +83,21 @@ function deleteTask(event) {
 
 
   const parenNode = event.target.closest('.list-group-item');
-  console.log(parenNode);
+
+  // Определяем ID Задачи
+  const id = Number(parenNode.id);
+
+  // Находим индекс задачи в массиве
+  const index = tasks.findIndex((task) => task.id === id);
+
+  // Удаляем задачу из массива с задачами
+  tasks.slice(index, 1)
+
+
+
+
+
+  // Удаляем задачу из разметки
   parenNode.remove()
   // Проверка Если в списке задач более 1-го элемента, скрываем блок
 
@@ -103,6 +117,13 @@ function doneTask(event) {
   // Проверяем что клик был по кнопке "задача выполнена"
 
   const parenNode = event.target.closest('.list-group-item');
+  // Определяем ID задачи
+  const id = Number(parenNode.id);
+  const task = tasks.find((task) => task.id === id)
+  task.done = !task.done
+
+
+
   const taskTitle = parenNode.querySelector('.task-title');
   taskTitle.classList.toggle('task-title--done');
 
